@@ -34,7 +34,7 @@ body {
 
 .container {
   background-color: var(--dark-blue);
-  padding: 2.5rem;
+  padding: 2.5rem 3.5rem;
 }
 
 .star-image {
@@ -56,33 +56,11 @@ p {
   line-height: 1.7;
 }
 
-.ratings-container {
+form {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 2rem 0;
-}
-
-.rating {
-  color: var(--light-grey);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: hsla(216, 12%, 54%, 0.2);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.rating.active {
-  background-color: var(--light-grey);
-  color: var(--white);
-}
-
-.rating:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
 }
 
 .btn {
@@ -125,17 +103,19 @@ p {
 
 .rating-selection-container {
   position: relative;
-  padding: 1rem;
-  margin-left: 3rem;
-  cursor: pointer;
+  padding: 1.5rem;
+  /* cursor: pointer; */
 }
 
 .rating-selection-container input {
   position: absolute;
-  opacity: 0;
+  opacity: 0.2;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  height: 4rem;
+  width: 4rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .selection {
@@ -144,8 +124,8 @@ p {
   justify-content: center;
   align-items: center;
   font-size: 1.3em;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -159,20 +139,6 @@ p {
 .selection:hover {
   color: var(--white);
 }
-
-.selection input:checked {
-  background-color: var(--light-grey);
-  color: var(--white);
-}
-/* .selection::after {
-  content: '1';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--light-grey);
-} */
 
 .rating-selection-container:hover input ~ .selection {
   background-color: var(--primary-color);
