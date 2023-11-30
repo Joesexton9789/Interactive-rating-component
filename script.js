@@ -15,6 +15,7 @@ function changeActive(e) {
 function setSelectedNumber() {
   const active = document.querySelector('.active')
 
+  console.log(active)
   if (active === null) {
     submitBtn.removeEventListener('click', setSelectedNumber)
     return
@@ -24,14 +25,5 @@ function setSelectedNumber() {
   console.log(selectedRating)
 }
 
-if (submitBtn) {
-  submitBtn.addEventListener('click', setSelectedNumber)
-} else {
-  submitBtn.removeEventListener('click', setSelectedNumber)
-}
-
-if (rating) {
-  rating.addEventListener('click', changeActive)
-} else {
-  rating.removeEventListener('click', changeActive)
-}
+submitBtn.addEventListener('click', setSelectedNumber)
+rating.addEventListener('click', changeActive)
