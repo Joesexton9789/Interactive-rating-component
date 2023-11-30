@@ -1,5 +1,6 @@
 const rating = document.querySelector('.ratings-container')
 const submitBtn = document.querySelector('a')
+const selectedNumber = document.getElementById('selected-number')
 let selectedRating
 
 function changeActive(e) {
@@ -22,7 +23,12 @@ function setSelectedNumber() {
   }
 
   selectedRating = active.innerText
-  console.log(selectedRating)
+
+  selectedNum(selectedRating)
+}
+
+function selectedNum(rating) {
+  selectedNumber.innerText = rating
 }
 
 submitBtn.addEventListener('click', setSelectedNumber)
