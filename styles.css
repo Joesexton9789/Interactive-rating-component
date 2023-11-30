@@ -123,6 +123,61 @@ p {
   color: var(--primary-color);
 }
 
+.rating-selection-container {
+  position: relative;
+  padding: 1rem;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.rating-selection-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.selection {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  height: 3rem;
+  width: 3rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--light-grey);
+  background-color: hsla(216, 12%, 54%, 0.2);
+  border-radius: 50%;
+  font-family: 'Overpass', sans-serif;
+}
+
+.selection:hover {
+  color: var(--white);
+}
+
+.selection input:checked {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+/* .selection::after {
+  content: '1';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--light-grey);
+} */
+
+.rating-selection-container:hover input ~ .selection {
+  background-color: var(--primary-color);
+}
+
 .thank-you-text > h3 {
   color: var(--white);
   font-size: 2rem;
