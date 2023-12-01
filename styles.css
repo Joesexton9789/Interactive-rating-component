@@ -154,6 +154,10 @@ form {
   background-color: var(--primary-color);
 }
 
+.thank-you-text {
+  margin-bottom: 2rem;
+}
+
 .thank-you-text > h3 {
   color: var(--white);
   font-size: 2rem;
