@@ -1,35 +1,18 @@
-const rating = document.querySelector('.ratings-container')
-const submitBtn = document.querySelector('a')
-const selectedNumber = document.getElementById('selected-number')
-let selectedRating
+const btn = document.getElementById('form')
+const ratingSelected = document.getElementById('selected-number')
+const card1 = document.querySelector('.card')
+const card2 = document.querySelector('.card2')
 
-function changeActive(e) {
-  const activeNumber = document.querySelectorAll('.active')
-  if (activeNumber.length >= 1) {
-    activeNumber.forEach(child => child.classList.remove('active'))
-  }
-  if (e.target.classList.contains('rating')) {
-    e.target.classList.toggle('active')
-  }
+function runSuccess(e) {
+  e.preventDefault()
+
+  card1.setAttribute('hidden', true)
+  card2.removeAttribute('hidden')
+  const ratingValue = document.querySelector(
+    "input[name='rating']:checked"
+  ).value
+  console.log(ratingValue)
+  ratingSelected.innerText = ratingValue
 }
 
-function setSelectedNumber() {
-  const active = document.querySelector('.active')
-
-  console.log(active)
-  if (active === null) {
-    submitBtn.removeEventListener('click', setSelectedNumber)
-    return
-  }
-
-  selectedRating = active.innerText
-
-  selectedNum(selectedRating)
-}
-
-function selectedNum(rating) {
-  selectedNumber.innerText = rating
-}
-
-submitBtn.addEventListener('click', setSelectedNumber)
-rating.addEventListener('click', changeActive)
+btn.addEventListener('submit', runSuccess)

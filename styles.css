@@ -27,7 +27,7 @@ body {
 
 .card {
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 30px;
   max-width: 25%;
   margin-bottom: 3rem;
 }
@@ -58,9 +58,18 @@ p {
 
 form {
   display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 2rem 0;
+}
+
+.btn-container {
+  margin-top: auto;
 }
 
 .btn {
@@ -71,15 +80,11 @@ form {
   padding: 1rem 0;
   font-size: 1.1rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.3rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-}
-
-.btn a {
-  display: block;
-  text-decoration: none;
+  margin-bottom: 2rem;
   color: var(--white);
 }
 
@@ -104,7 +109,7 @@ form {
 .rating-selection-container {
   position: relative;
   padding: 1.5rem;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .rating-selection-container input {
@@ -116,6 +121,11 @@ form {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.rating-selection-container input:checked ~ .selection {
+  background-color: var(--light-grey);
+  color: white;
 }
 
 .selection {

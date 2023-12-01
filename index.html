@@ -47,41 +47,68 @@
           </p>
         </div>
         <div class="ratings-container">
-          <form action="">
-            <label class="rating-selection-container">
-              <input type="radio" />
-              <span class="selection">1</span>
-            </label>
-            <label class="rating-selection-container">
-              <input type="radio" />
-              <span class="selection">2</span>
-            </label>
-            <label class="rating-selection-container">
-              <input type="radio" />
-              <span class="selection">3</span>
-            </label>
-            <label class="rating-selection-container">
-              <input type="radio" />
-              <span class="selection">4</span>
-            </label>
-            <label class="rating-selection-container">
-              <input type="radio" />
-              <span class="selection">5</span>
-            </label>
+          <form id="form">
+            <div class="inputs">
+              <label class="rating-selection-container">
+                <input type="radio" name="rating" value="1" />
+                <span class="selection">1</span>
+              </label>
+              <label class="rating-selection-container">
+                <input type="radio" name="rating" value="2" />
+                <span class="selection">2</span>
+              </label>
+              <label class="rating-selection-container">
+                <input type="radio" name="rating" value="3" />
+                <span class="selection">3</span>
+              </label>
+              <label class="rating-selection-container">
+                <input type="radio" name="rating" value="4" />
+                <span class="selection">4</span>
+              </label>
+              <label class="rating-selection-container">
+                <input type="radio" name="rating" value="5" />
+                <span class="selection">5</span>
+              </label>
+            </div>
+            <button class="btn" type="submit">submit</button>
           </form>
         </div>
-        <button class="btn" id="submit">
-          <a href="thankyou.html">Submit</a>
-        </button>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Joe Sexton</a>.
+        </div>
       </div>
     </div>
 
+    <div class="card card2" hidden>
+      <div class="container thank-you-container">
+        <img
+          class="thank-you-image"
+          src="./images/illustration-thank-you.svg"
+          alt=""
+        />
+        <div class="selected">
+          You selected <span id="selected-number">4</span> out of 5
+        </div>
+
+        <div class="thank-you-text">
+          <h3>Thank you!</h3>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Joe Sexton</a>.
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
