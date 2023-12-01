@@ -6,11 +6,16 @@ const card2 = document.querySelector('.card2')
 function runSuccess(e) {
   e.preventDefault()
 
-  card1.setAttribute('hidden', true)
-  card2.removeAttribute('hidden')
   const ratingValue = document.querySelector(
     "input[name='rating']:checked"
   ).value
+
+  if ((ratingValue.value = null)) {
+    return
+  }
+
+  card1.setAttribute('hidden', true)
+  card2.removeAttribute('hidden')
   console.log(ratingValue)
   ratingSelected.innerText = ratingValue
 }
